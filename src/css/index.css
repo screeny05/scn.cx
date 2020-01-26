@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'edo';
+    src: url('../fonts/edo/edo-webfont.woff2') format('woff2'),
+         url('../fonts/edo/edo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background: #190a1d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.banner {
+    overflow: hidden;
+    height: 100%;
+    border: 2.5vmax solid #1a0b1e;
+    text-decoration: none;
+    display: block;
+    --margin-factor: -1em;
+    --margin-offset: -4em;
+}
+
+.banner__line {
+    transform: skewX(-10deg) rotate(-10deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 12vmax;
+}
+
+.banner__line:nth-child(1) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 0); }
+.banner__line:nth-child(2) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 1); }
+.banner__line:nth-child(3) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 2); }
+.banner__line:nth-child(4) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 3); }
+.banner__line:nth-child(5) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 4); }
+.banner__line:nth-child(6) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 5); }
+.banner__line:nth-child(7) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 6); }
+.banner__line:nth-child(8) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 7); }
+.banner__line:nth-child(9) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 8); }
+.banner__line:nth-child(10) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 9); }
+.banner__line:nth-child(11) { margin-left: calc(var(--margin-offset) + var(--margin-factor) * 10); }
+
+.banner__text {
+    font-family: 'edo', Arial, Helvetica, sans-serif;
+    background: linear-gradient(to left, #e60613, #c54096, #16acc1);
+    -webkit-text-fill-color: #0000;
+    -webkit-background-clip: text;
+    display: inline-block;
+    letter-spacing: -0.03em;
+}
+
+.banner__text::before {
+    content: attr(data-content);
+}
