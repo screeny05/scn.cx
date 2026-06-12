@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <title>Anna & Sebastian — Wir heiraten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --ivory: #faf7f1;
+            --ink: #3b3a36;
+            --green: #4a5d4e;
+            --gold: #b5985a;
+            --line: #d8d2c4;
+        }
+        * { box-sizing: border-box; margin: 0; }
+        body {
+            background: var(--ivory);
+            color: var(--ink);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            letter-spacing: 0.02em;
+        }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; color: var(--green); }
+        section { max-width: 640px; margin: 0 auto; padding: 4.5rem 1.5rem; }
+        section + section { border-top: 1px solid var(--line); }
+
+        .hero { text-align: center; padding-top: 6rem; }
+        .hero__eyebrow {
+            text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.8rem; color: var(--gold);
+        }
+        .hero h1 { font-size: clamp(3rem, 9vw, 5rem); line-height: 1.1; margin: 1.2rem 0; }
+        .hero h1 .amp { font-style: italic; color: var(--gold); }
+        .hero__date { font-size: 1.15rem; letter-spacing: 0.15em; }
+        .hero__venue { color: #7a766c; margin-top: 0.3rem; }
+        .ornament { color: var(--gold); margin: 2rem auto 0; font-size: 1.3rem; letter-spacing: 0.6em; }
+
+        .greeting {
+            text-align: center; font-family: 'Cormorant Garamond', serif;
+            font-size: 1.45rem; font-style: italic;
+        }
+        .greeting strong { font-style: normal; color: var(--green); }
+
+        h2 {
+            text-align: center; font-size: 2rem; margin-bottom: 2.2rem;
+        }
+        h2::after {
+            content: ""; display: block; width: 3rem; height: 1px;
+            background: var(--gold); margin: 0.9rem auto 0;
+        }
+
+        .schedule { list-style: none; padding: 0; }
+        .schedule li {
+            display: grid; grid-template-columns: 6rem 1fr; gap: 1.5rem;
+            padding: 1rem 0; border-bottom: 1px dotted var(--line);
+        }
+        .schedule time { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); text-align: right; }
+        .schedule .what { font-weight: 400; }
+        .schedule .where { color: #7a766c; font-size: 0.92rem; }
+
+        .info p + p { margin-top: 1rem; }
+        .info a { color: var(--green); }
+
+        .faq dt { font-weight: 500; margin-top: 1.4rem; }
+        .faq dd { margin: 0.2rem 0 0; color: #5d5b54; }
+
+        .rsvp { text-align: center; }
+        .rsvp form { text-align: left; margin-top: 2rem; }
+        .person {
+            border: 1px solid var(--line); background: #fff;
+            padding: 1.4rem 1.6rem; margin-bottom: 1.2rem;
+        }
+        .person h3 { font-size: 1.35rem; margin-bottom: 0.8rem; }
+        .choices { display: flex; gap: 1.8rem; margin-bottom: 0.9rem; }
+        .choices label { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+        input[type="radio"] { accent-color: var(--green); width: 1.05rem; height: 1.05rem; }
+        .person input[type="text"] {
+            width: 100%; border: none; border-bottom: 1px solid var(--line);
+            background: transparent; padding: 0.45rem 0.1rem;
+            font: inherit; color: inherit;
+        }
+        .person input[type="text"]:focus { outline: none; border-bottom-color: var(--gold); }
+        button {
+            display: block; margin: 2rem auto 0; padding: 0.9rem 3.2rem;
+            background: var(--green); color: var(--ivory); border: none;
+            font: inherit; letter-spacing: 0.2em; text-transform: uppercase;
+            font-size: 0.85rem; cursor: pointer;
+        }
+        button:hover { background: #3c4c40; }
+        .deadline { margin-top: 1rem; font-size: 0.9rem; color: #7a766c; }
+
+        footer { text-align: center; padding: 3rem 1rem 4rem; color: #9a958a; font-size: 0.85rem; border-top: 1px solid var(--line); }
+        footer .names { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--green); font-style: italic; }
+    </style>
+</head>
+<body>
+    <!-- TODO: Alle Inhalte sind Platzhalter -->
+    <section class="hero">
+        <p class="hero__eyebrow">Wir heiraten</p>
+        <h1>Anna <span class="amp">&amp;</span> Sebastian</h1>
+        <p class="hero__date">Samstag, 12. September 2026</p>
+        <p class="hero__venue">Gut Beispielhof · Hamburg</p>
+        <p class="ornament">❧</p>
+    </section>
+
+    <section>
+        <p class="greeting" id="greeting">
+            Liebe <strong>Familie Mustermann</strong>,<br />
+            wir freuen uns sehr, diesen Tag mit euch zu feiern —<br />
+            und bitten euch herzlich um eure Rückmeldung bis zum <strong>1. Juli 2026</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Der Tag</h2>
+        <ul class="schedule">
+            <li><time>14:00</time><div><div class="what">Freie Trauung</div><div class="where">Im Garten des Gutshofs</div></div></li>
+            <li><time>15:30</time><div><div class="what">Sektempfang &amp; Kuchen</div><div class="where">Auf der Terrasse</div></div></li>
+            <li><time>18:00</time><div><div class="what">Abendessen</div><div class="where">Im Festsaal</div></div></li>
+            <li><time>21:00</time><div><div class="what">Party</div><div class="where">Bis in die Nacht</div></div></li>
+        </ul>
+    </section>
+
+    <section class="info">
+        <h2>Anreise &amp; Übernachtung</h2>
+        <p><strong>Gut Beispielhof</strong> · Musterallee 1, 22000 Hamburg · <a href="#">Route in Google Maps</a></p>
+        <p>Parkplätze sind ausreichend vorhanden. Wer feiern möchte, ohne zu fahren: Im <a href="#">Hotel Beispiel</a> (5 Min. entfernt) haben wir ein Zimmerkontingent unter dem Stichwort „Anna &amp; Sebastian" reserviert.</p>
+    </section>
+
+    <section>
+        <h2>Gut zu wissen</h2>
+        <dl class="faq">
+            <dt>Was ziehe ich an?</dt>
+            <dd>Festlich-sommerlich. Die Trauung findet auf einer Wiese statt — dünne Absätze auf eigene Gefahr.</dd>
+            <dt>Dürfen wir etwas schenken?</dt>
+            <dd>Euer Kommen ist das größte Geschenk. Wer dennoch mag: Wir sparen auf unsere Hochzeitsreise.</dd>
+            <dt>Sind Kinder eingeladen?</dt>
+            <dd>Wir feiern im engsten Kreis der Erwachsenen — wir bitten um Verständnis.</dd>
+        </dl>
+    </section>
+
+    <section class="rsvp">
+        <h2>Rückmeldung</h2>
+        <p>Bitte gebt uns für jede Person Bescheid.</p>
+        <form>
+            <div class="person">
+                <h3>Max Mustermann</h3>
+                <div class="choices">
+                    <label><input type="radio" name="p1" /> Ich bin dabei</label>
+                    <label><input type="radio" name="p1" /> Leider nicht</label>
+                </div>
+                <input type="text" placeholder="Unverträglichkeiten / Ernährung (z. B. vegetarisch)" />
+            </div>
+            <div class="person">
+                <h3>Erika Mustermann</h3>
+                <div class="choices">
+                    <label><input type="radio" name="p2" /> Ich bin dabei</label>
+                    <label><input type="radio" name="p2" /> Leider nicht</label>
+                </div>
+                <input type="text" placeholder="Unverträglichkeiten / Ernährung (z. B. vegetarisch)" />
+            </div>
+            <button type="button">Antwort senden</button>
+            <p class="deadline">Rückmeldung bis 1. Juli 2026 · Prototyp, sendet noch nichts</p>
+        </form>
+    </section>
+
+    <footer>
+        <p class="names">Anna &amp; Sebastian</p>
+        <p>12. September 2026 · Hamburg</p>
+    </footer>
+</body>
+</html>
