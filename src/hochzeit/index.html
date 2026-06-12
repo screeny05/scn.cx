@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <title>Sara &amp; Sebastian — Wir heiraten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#faf7f1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hochzeit.css" />
+</head>
+<body>
+    <!-- ============================================================
+         TODO-PLATZHALTER: Namen, Datum, Ort, Ablauf, FAQ-Texte.
+         Die technische Konfiguration (Google Form) liegt in js/hochzeit.js.
+         ============================================================ -->
+
+    <section class="hero">
+        <p class="hero__eyebrow">Wir heiraten</p>
+        <h1>Sara <span class="amp">&amp;</span> Sebastian</h1>
+        <p class="hero__date">Samstag, 12. September 2026</p>
+        <p class="hero__venue">Gut Beispielhof · Hamburg</p>
+        <p class="ornament">❧</p>
+    </section>
+
+    <section>
+        <p class="greeting">
+            <span data-bind="anrede">Liebe Gäste</span>,<br />
+            wir freuen uns sehr, diesen Tag mit euch zu feiern —<br />
+            und bitten euch herzlich um eure Rückmeldung
+            bis zum <strong data-bind="frist">1. Juli 2026</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Der Tag</h2>
+        <ul class="schedule">
+            <li><time>14:00</time><div><div class="what">Freie Trauung</div><div class="where">Im Garten des Gutshofs</div></div></li>
+            <li><time>15:30</time><div><div class="what">Sektempfang &amp; Kuchen</div><div class="where">Auf der Terrasse</div></div></li>
+            <li><time>18:00</time><div><div class="what">Abendessen</div><div class="where">Im Festsaal</div></div></li>
+            <li><time>21:00</time><div><div class="what">Party</div><div class="where">Bis in die Nacht</div></div></li>
+        </ul>
+    </section>
+
+    <section class="info">
+        <h2>Anreise &amp; Übernachtung</h2>
+        <p><strong>Gut Beispielhof</strong> · Musterallee 1, 22000 Hamburg · <a href="https://maps.google.com/?q=Gut+Beispielhof" rel="noopener" target="_blank">Route in Google Maps</a></p>
+        <p>Parkplätze sind ausreichend vorhanden. Wer feiern möchte, ohne zu fahren: Im <a href="#" rel="noopener" target="_blank">Hotel Beispiel</a> (5 Min. entfernt) haben wir ein Zimmerkontingent unter dem Stichwort „Sara &amp; Sebastian" reserviert.</p>
+    </section>
+
+    <section>
+        <h2>Gut zu wissen</h2>
+        <dl class="faq">
+            <dt>Was ziehe ich an?</dt>
+            <dd>Festlich-sommerlich. Die Trauung findet auf einer Wiese statt — dünne Absätze auf eigene Gefahr.</dd>
+            <dt>Dürfen wir etwas schenken?</dt>
+            <dd>Euer Kommen ist das größte Geschenk. Wer dennoch mag: Wir sparen auf unsere Hochzeitsreise.</dd>
+            <dt>Sind Kinder eingeladen?</dt>
+            <dd>Wir feiern im engsten Kreis der Erwachsenen — wir bitten um Verständnis.</dd>
+        </dl>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+        <h2>Rückmeldung</h2>
+
+        <!-- Sichtbar, solange kein gültiger Gast-Code in der URL steckt -->
+        <div id="rsvp-nocode" hidden>
+            <p>Diese Seite kennt euch leider noch nicht.<br />
+            Bitte öffnet den <strong>persönlichen Link aus eurer Einladung</strong> —
+            oder meldet euch direkt bei uns.</p>
+        </div>
+
+        <!-- Formular, wird per JS mit den Personen des Haushalts gefüllt -->
+        <div id="rsvp-form-wrap" hidden>
+            <p>Bitte gebt uns für jede Person Bescheid.</p>
+            <form id="rsvp-form" novalidate>
+                <div id="rsvp-personen"><!-- per JS gefüllt --></div>
+                <p class="form-error" id="rsvp-error" hidden>Bitte wählt für jede Person Zusage oder Absage aus.</p>
+                <button type="submit" id="rsvp-submit">Antwort senden</button>
+                <p class="deadline">Rückmeldung bis <span data-bind="frist">1. Juli 2026</span></p>
+                <p class="fallback" id="rsvp-fallback" hidden>
+                    Probleme beim Senden? <a href="#" id="rsvp-fallback-link" rel="noopener" target="_blank">Hier geht's direkt zum Formular.</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Danke-Zustand -->
+        <div id="rsvp-danke" hidden>
+            <p class="ornament">❧</p>
+            <p class="danke__text">Vielen Dank für eure Rückmeldung —<br />wir haben sie erhalten!</p>
+            <p class="danke__sub">Ihr wollt etwas ändern? Schreibt uns einfach kurz.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="names">Sara &amp; Sebastian</p>
+        <p>12. September 2026 · Hamburg</p>
+    </footer>
+
+    <script src="js/hochzeit.js"></script>
+</body>
+</html>

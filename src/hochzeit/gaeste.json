@@ -1,0 +1,15 @@
+{
+    "_hinweis": "TODO: Echte Gästeliste eintragen. Schlüssel = Code für den persönlichen Link (scn.cx/hochzeit/?g=CODE). Codes: 4-6 Zeichen, Kleinbuchstaben+Ziffern, nicht erratbar, ohne 0/o/1/l.",
+    "tk7m": {
+        "anrede": "Liebe Familie Mustermann",
+        "personen": ["Max Mustermann", "Erika Mustermann"]
+    },
+    "x4fx": {
+        "anrede": "Liebe Oma Inge",
+        "personen": ["Inge Beispiel"]
+    },
+    "p9rk": {
+        "anrede": "Lieber Tom, liebe Lisa",
+        "personen": ["Tom Beispiel", "Lisa Beispiel"]
+    }
+}
